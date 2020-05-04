@@ -19,4 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Socialite
+Route::get('/authorize/provider/{provider}', 'OauthController@redirectToProvider')
+    ->where('provider','twitter|facebook|linkedin|google')
+    ->name('provider.auth');
+
+Route::get('/authorize/provider/{provider}/callback', 'OauthController@handleProviderCallback')
+    ->where('provider','twitter|facebook|linkedin|google')
+    ->name('provider.auth.callback');
+
 Route::get('/home', 'HomeController@index')->name('home');
