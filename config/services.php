@@ -30,4 +30,17 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('OAUTH_CALLBACK_DOMAIN').'/authorize/provider/facebook/callback',
+        'default_graph_version' => 'v3.0',
+    ],
+
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('OAUTH_CALLBACK_DOMAIN').'/authorize/provider/twitter/callback',
+    ],
+
 ];
