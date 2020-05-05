@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(SocialProfile::class,'user_id');
     }
+
+    public function facebookToken()
+    {
+        return $this->socialProfiles()->where('provider', '=', 'facebook')->first()->oauth_token;
+    }
 }

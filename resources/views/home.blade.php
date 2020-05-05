@@ -7,7 +7,10 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
                 <div class="card-body">
-                    You are logged in! <br> <br>From here you can set the user's password
+                    <p>You are logged in! <br> <br>From here you can set the user's password</p>
+                    @if(auth()->user()->socialProfiles()->where('provider', '=','facebook')->first())
+                        <a href="{{ route('fbPages') }}" class="btn btn-sm btn-info">List my facebook pages</a>
+                    @endif
                 </div>
                 <div class="card-body">
                     <h3>Connected social profiles</h3>

@@ -29,3 +29,4 @@ Route::get('/authorize/provider/{provider}/callback', 'OauthController@handlePro
     ->name('provider.auth.callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/fbPages', 'HomeController@listPages')->name('fbPages');
