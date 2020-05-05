@@ -9,13 +9,15 @@
 
                 <div class="card-body">
                     <div class="mb-3 mt-2">
+                        <h3 class="text-center">Login using social media</h3>
                         <div class="social-btn text-center  my-2">
                             <a href="{{ route('provider.auth',['provider'=> 'facebook', 'action_type' => 'login']) }}" class="btn btn-primary"><i class="mdi mdi-facebook"></i>&nbsp; Facebook</a>
                             <a href="{{ route('provider.auth',['provider'=> 'twitter', 'action_type' => 'login']) }}" class="btn btn-info"><i class="mdi mdi-twitter"></i>&nbsp; Twitter</a>
                             <a href="{{ route('provider.auth',['provider'=> 'google', 'action_type' => 'login']) }}" class="btn btn-danger"><i class="mdi mdi-google"></i>&nbsp; Google</a>
                         </div>
                     </div>
-
+                    <br>
+                    <h3 class="text-center">Login using Email</h3>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
